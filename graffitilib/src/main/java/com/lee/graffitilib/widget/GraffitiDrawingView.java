@@ -209,9 +209,8 @@ public class GraffitiDrawingView extends View {
 
     private void endShape(float touchX, float touchY, RectF rect) {
         if (currentShape.getShape().hasBeenTapped()) {
-            // just a tap, this is not a shape, so remove it
             drawShapes.remove(currentShape);
-            //handleTap(touchX, touchY);
+
         }
 
         if (viewChangeListener != null) {
@@ -224,7 +223,7 @@ public class GraffitiDrawingView extends View {
      * 撤销
      * @return
      */
-    boolean undo() {
+   public boolean undo() {
         if (!drawShapes.empty()) {
             redoShapes.push(drawShapes.pop());
             invalidate();
@@ -239,7 +238,7 @@ public class GraffitiDrawingView extends View {
      * 反撤销
      * @return
      */
-    boolean redo() {
+  public   boolean redo() {
         if (!redoShapes.empty()) {
             drawShapes.push(redoShapes.pop());
             invalidate();
@@ -251,7 +250,7 @@ public class GraffitiDrawingView extends View {
         return !redoShapes.empty();
     }
 
-    // region eraser
+
     void brushEraser() {
         isEnabled = true;
         isErasing = true;
@@ -264,9 +263,9 @@ public class GraffitiDrawingView extends View {
     float getEraserSize() {
         return mBrushEraserSize;
     }
-    // endregion
 
-    // region Setters/Getters
+
+
     public void setShapeBuilder(ShapeBuilder shapeBuilder) {
         currentShapeBuilder = shapeBuilder;
     }
@@ -297,7 +296,7 @@ public class GraffitiDrawingView extends View {
     Pair<Stack<ShapeAndPaint>, Stack<ShapeAndPaint>> getDrawingPath() {
         return new Pair<>(drawShapes, redoShapes);
     }
-    // endregion
+
 
 }
 
