@@ -2,9 +2,6 @@ package com.lee.graffitilib.base;
 
 import android.graphics.Paint;
 
-/**
- * Simple data class to be put in an ordered Stack
- */
 public class ShapeAndPaint {
     private final AbstractShape shape;
     private final Paint paint;

@@ -99,7 +99,7 @@ public class GraffitiDrawingView extends View {
         setLayerType(LAYER_TYPE_HARDWARE, null);
         setVisibility(View.GONE);
         currentShapeBuilder = new ShapeBuilder();
-
+        setBrushViewChangeListener(currentShapeBuilder.getViewChangeListener());
         enableDrawing(true);
     }
 

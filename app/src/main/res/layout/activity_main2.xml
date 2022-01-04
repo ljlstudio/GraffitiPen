@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <Button
+        android:id="@+id/stroke_paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分段类型的画笔" />
+
+
+    <Button
+        android:id="@+id/bush_paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:text="连续性画笔" />
+
+
+    <Button
+        android:id="@+id/bitmap_paint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="图片组合类型画笔" />
+</androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
